@@ -113,7 +113,7 @@ function getCubes(size, stepSize, minX, maxX, minY, maxY, minZ, maxZ, voxelData)
 onmessage = function (oEvent) {
     console.log("worker started");
     //load worker dependencies
-    importScripts("http://www.grantforrest.net/webgl-marchingcubes/lib/threejs/three.js", "http://www.grantforrest.net/webgl-marchingcubes/js/marchingcubes.js", "http://www.grantforrest.net/webgl-marchingcubes/js/marchingalg.js");
+    importScripts("../lib/threejs/three.js", "marchingcubes.js", "marchingalg.js");
     //pass our chunk data
     createChunk(oEvent.data.size, oEvent.data.stepSize, oEvent.data.chunkSize, oEvent.data.chunkX, oEvent.data.chunkY, oEvent.data.chunkZ, oEvent.data.voxelData, oEvent.data.batchSizeX, oEvent.data.batchSizeY, oEvent.data.batchSizeZ);
 }
